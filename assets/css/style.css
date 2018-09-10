@@ -1,0 +1,126 @@
+/* Base CSS */
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+body {
+
+}
+a:hover { text-decoration: none }
+.section-padding{padding:80px 0;}
+
+.project-bg-1{background-image: url(../img/nature-img-1.jpg);}
+.project-bg-2{background-image: url(../img/nature-img-2.jpg);}
+.project-bg-3{background-image: url(../img/nature-img-3.jpg);}
+.project-bg-4{background-image: url(../img/nature-img-4.jpg);}
+.project-bg-5{background-image: url(../img/nature-img-5.jpg);}
+.project-bg-6{background-image: url(../img/nature-img-6.jpg);}
+
+ul.project-title li {
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    padding-bottom: 5px;
+}
+ul.project-title li.active:before {
+    background-color: gold;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+ul.project-title li:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    opacity: 0;
+    visibility: hidden;
+}
+.single-portfolio-item {
+    width: 33.333333%;
+    float:  left;
+    height: 300px;
+    position:  relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    z-index: 1
+}
+
+.project-list {
+    overflow:  hidden;
+}
+
+
+.project-hover {
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.single-portfolio-item:hover .project-hover {
+    bottom: 5px;
+    opacity: 1;
+    visibility: visible;
+}
+.project-hover h4 span {
+    display: block;
+    font-size:  70%;
+    font-weight:  400;
+    margin-top: 5px;
+}
+.single-portfolio-item.large-bg {
+    height: 600px;
+}
+
+
+.single-portfolio-item:after {
+    position:  absolute;
+    content: "";
+    top: 0;
+    left:  0;
+    width:  100%;
+    height:  100%;
+    z-index:  -1;
+    opacity: 0;
+    background:  #000;
+    visibility:  hidden;
+    transition:  .3s;
+}
+
+.single-portfolio-item:hover:after {
+    opacity: .3;
+    visibility:  visible;
+}
